@@ -2,19 +2,7 @@
 
 import fibonacci from "./fib";
 
-
-interface Params {
-  num: string;
-}
-
-interface Request {
-  params: Params
-}
-
-interface Response {
-  send: (result: string) => void;
-
-}
+import { Request, Response } from "express";
 
 export default (req: Request, res: Response) => {
   const { num } = req.params;
